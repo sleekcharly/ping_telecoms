@@ -7,7 +7,7 @@ type Props = {
 
 function Layout({ children }: Props) {
   return (
-    <div>
+    <div data-testid="layout">
       {/* Header component */}
       <Header />
       {/* entire page content */}
