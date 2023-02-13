@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
+import NextLink from 'next/link';
 
 type Props = {};
 
@@ -44,9 +45,13 @@ function AboutSection({}: Props) {
           capacity and make good returns on their investment
         </p>
 
-        <button className="py-1 px-5 bg-[#800000] rounded-full">
+        <NextLink
+          href="/about"
+          role="button"
+          className="py-1 px-5 bg-[#800000] rounded-full"
+        >
           Learn more
-        </button>
+        </NextLink>
       </div>
 
       <div className="relative w-[360px] h-[500px]">

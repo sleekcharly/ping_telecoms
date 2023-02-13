@@ -38,15 +38,27 @@ function Footer({}: Props) {
           <div className="flex flex-col space-y-2  text-base">
             <h1 className="uppercase tracking-wider font-bold">links</h1>
             <div className="flex md:flex-col justify-around md:w-[90px] md:space-y-10">
-              <p className="hover:pl-2 hover:text-[#800000] hover:font-bold transition-all duration-500">
+              <NextLink
+                href="/"
+                role="button"
+                className="hover:pl-2 hover:text-[#800000] hover:font-bold transition-all duration-500"
+              >
                 {'>'} Home
-              </p>
-              <p className="hover:pl-2 hover:text-[#800000] hover:font-bold transition-all duration-500">
+              </NextLink>
+              <NextLink
+                href="/about"
+                role="button"
+                className="hover:pl-2 hover:text-[#800000] hover:font-bold transition-all duration-500"
+              >
                 {'>'} About
-              </p>
-              <p className="hover:pl-2 hover:text-[#800000] hover:font-bold transition-all duration-500">
+              </NextLink>
+              <NextLink
+                href="/services"
+                role="button"
+                className="hover:pl-2 hover:text-[#800000] hover:font-bold transition-all duration-500"
+              >
                 {'>'} Services
-              </p>
+              </NextLink>
               <p className="hover:pl-2 hover:text-[#800000] hover:font-bold transition-all duration-500">
                 {'>'} Contact
               </p>

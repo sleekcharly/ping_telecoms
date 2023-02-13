@@ -42,13 +42,13 @@ function Header({}: Props) {
         {/* Primary navbar items */}
         <nav className="hidden md:flex w-full" data-testid="navigation_links">
           <div className="flex flex-1 space-x-6 lg:space-x-8">
-            <NextLink href="/" className="header-link group">
+            <NextLink href="/about" className="header-link group">
               <span className="span">Who we are</span>
             </NextLink>
-            <NextLink href="/" className="header-link group">
+            <NextLink href="/services" className="header-link group">
               <span className="span">What we do</span>
             </NextLink>
-            <NextLink href="/" className="header-link group">
+            <NextLink href="/partners" className="header-link group">
               <span className="span">Partners</span>
             </NextLink>
           </div>
