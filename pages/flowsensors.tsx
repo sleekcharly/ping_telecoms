@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import Header from '@/components/layouts/Header';
 import { SocialIcon } from 'react-social-icons';
 import Image from 'next/image';
@@ -9,7 +9,7 @@ import toast from 'react-hot-toast';
 
 type Props = {};
 
-function networks({}: Props) {
+function flowsensors({}: Props) {
   // get date year
   const date = new Date();
   const [year] = [date.getFullYear()];
@@ -74,18 +74,18 @@ function networks({}: Props) {
       return;
     }
   };
-
   return (
     <div>
       <Header />
 
       <section className="px-4 py-16 bg-[#222222] flex flex-col items-center text-white">
-        <h1 className="text-2xl font-bold text-center">Networks</h1>
+        <h1 className="text-2xl font-bold text-center">
+          Emmission Flow Monitoring
+        </h1>
         <div className="w-16 h-2 bg-[#800000] mt-1 mb-6"></div>
         <h4 className="w-[90%] lg:w-[60%] text-center">
-          We design, implement and support Wireless networks for Internet
-          access, Intranet, corporate online operations, and Virtual Private
-          networks over the Internet or third party network.
+          At PingTelecoms, we offer installation and maintenance of OSI Energy
+          flow sensors for oil and gas pipelines.
         </h4>
       </section>
 
@@ -99,17 +99,22 @@ function networks({}: Props) {
           <div className="flex flex-col space-y-4 justify-center items-center md:flex-row md:space-y-0 md:space-x-10 lg:space-x-20 ">
             <div className="md:w-[80%] ">
               <p className="mb-6 tracking-wider leading-7">
-                ​Our business spans through network auditing, upgrade and
-                integration. ​Our specialities include but not limited to
-                outdoor/indoor wireless networks, metropolitan area networks and
-                wide area networks using bridges and routers.
+                The Thermal Oxidizers, Wet Scrubbers, Flare Stacks,
+                Incinerators, SRU, Cat Crackers, Glass Furnaces, and related
+                processes with entrained/suspended liquid droplets are only a
+                few tough flow applications where Ping Telecoms&apos; integrated
+                OFS (Optical Flow Sensor) technology has succeeded. Chemical,
+                Petrochemical Refineries, Cement, Glass, Aluminum, Waste to Gas,
+                Terminal loading stations, Pulp and Paper, Steel Plants,
+                Electric Arc Furnaces, and other industries are among the many
+                that utilize this technology.
               </p>
             </div>
 
             <div className="relative w-[350px] h-[300px] md:w-[700px] md:h-[400px]">
               <Image
-                src="/images/networking2.webp"
-                alt="networking image"
+                src="/images/airflow.webp"
+                alt="OFS airflow illustration"
                 fill
                 quality={100}
                 className="rounded-md"
@@ -122,19 +127,38 @@ function networks({}: Props) {
       <section className="px-2 md:px-4 lg:px-10 py-10 bg-[#222222] text-white">
         <div className="lg:w-[95%] xl:w-[80%] flex flex-col lg:flex-row lg:space-x-10 items-center justify-center lg:mr-auto lg:ml-auto lg:max-w-[80%]">
           <div className="lg:hidden">
-            <h2 className="text-xl lg:text-2xl">VSAT NETWORKS</h2>
+            <h2 className="text-xl lg:text-2xl">OFS Measurement</h2>
             <div className="w-16 h-2 bg-[#800000] mt-1 mb-6"></div>
-            <p className="mb-6 tracking-wider leading-7">
-              Our VSAT services include installation, and maintenance of
-              internet gateways, hubs, remote VSAT sites, Network management,
-              Peak & Pole, site commissioning and upgrade for C-Band, KU-Band
-              and KA-Band.
+            <p className="mb-4 tracking-wider leading-7">
+              OFS measurement is Unaffected by changes in:
             </p>
+            <ul className="list-disc ml-10 mb-6">
+              <li>Temperature</li>
+              <li>Pressure</li>
+              <li>Gas Density</li>
+              <li>Gas Composition</li>
+              <li>Humidity</li>
+              <li>Moisture</li>
+              <li>Opacity</li>
+            </ul>
+
+            <p className="mb-4 tracking-wider leading-7">
+              The OFS measurement is also not dependent on:
+            </p>
+            <ul className="list-disc ml-10 mb-4">
+              <li>Design DP</li>
+              <li>Gas Densities</li>
+              <li>Differential Pressure</li>
+              <li>Humidity</li>
+              <li>Speed of Sound or the Speed of Light</li>
+              <li>Beta Ratio</li>
+              <li>Temperature</li>
+            </ul>
           </div>
 
-          <div className="relative w-[350px] h-[300px] md:w-[450px] md:h-[400px] xl:w-[550px] xl:h-[500px] mr-auto ml-auto">
+          <div className="relative w-[350px] h-[450px] md:w-[450px] md:h-[600px] xl:w-[550px] xl:h-[700px] mr-auto ml-auto">
             <Image
-              src="/images/satellite.webp"
+              src="/images/optical_flow.webp"
               alt="VSAT satellite"
               fill
               quality={100}
@@ -143,14 +167,33 @@ function networks({}: Props) {
           </div>
 
           <div className="hidden lg:block lg:w-[50%]">
-            <h2 className="text-xl lg:text-2xl">VSAT NETWORKS</h2>
+            <h2 className="text-xl lg:text-2xl">OFS Measurement</h2>
             <div className="w-16 h-2 bg-[#800000] mt-1 mb-6"></div>
-            <p className="mb-6 tracking-wider leading-7">
-              Our VSAT services include installation, and maintenance of
-              internet gateways, hubs, remote VSAT sites, Network management,
-              Peak & Pole, site commissioning and upgrade for C-Band, KU-Band
-              and KA-Band.
+            <p className="mb-4 tracking-wider leading-7">
+              OFS measurement is Unaffected by changes in:
             </p>
+            <ul className="list-disc ml-10 mb-6">
+              <li>Temperature</li>
+              <li>Pressure</li>
+              <li>Gas Density</li>
+              <li>Gas Composition</li>
+              <li>Humidity</li>
+              <li>Moisture</li>
+              <li>Opacity</li>
+            </ul>
+
+            <p className="mb-4 tracking-wider leading-7">
+              The OFS measurement is also not dependent on:
+            </p>
+            <ul className="list-disc ml-10 mb-4">
+              <li>Design DP</li>
+              <li>Gas Densities</li>
+              <li>Differential Pressure</li>
+              <li>Humidity</li>
+              <li>Speed of Sound or the Speed of Light</li>
+              <li>Beta Ratio</li>
+              <li>Temperature</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -261,4 +304,4 @@ function networks({}: Props) {
   );
 }
 
-export default networks;
+export default flowsensors;

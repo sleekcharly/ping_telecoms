@@ -1,25 +1,17 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import Header from '@/components/layouts/Header';
 import { SocialIcon } from 'react-social-icons';
 import Image from 'next/image';
-import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import { animateScroll as scroll } from 'react-scroll';
 import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
 
 type Props = {};
 
-function networks({}: Props) {
+function navigation({}: Props) {
   // get date year
   const date = new Date();
   const [year] = [date.getFullYear()];
-
-  // Use the useTypewriter hook to set up the phrases
-  const [text, count] = useTypewriter({
-    words: ['anytime.', 'anywhere.'],
-    loop: true,
-    delaySpeed: 2000,
-  });
 
   // scroll to top of the page
   const scrollToTop = () => {
@@ -74,42 +66,46 @@ function networks({}: Props) {
       return;
     }
   };
-
   return (
     <div>
       <Header />
 
       <section className="px-4 py-16 bg-[#222222] flex flex-col items-center text-white">
-        <h1 className="text-2xl font-bold text-center">Networks</h1>
+        <h1 className="text-2xl font-bold text-center">Navigational Aids</h1>
         <div className="w-16 h-2 bg-[#800000] mt-1 mb-6"></div>
         <h4 className="w-[90%] lg:w-[60%] text-center">
-          We design, implement and support Wireless networks for Internet
-          access, Intranet, corporate online operations, and Virtual Private
-          networks over the Internet or third party network.
+          We maintain Navigational aid like Non-directional radio Beacon (NDB),
+          Instrument Landing System (ILS), Distance Measurement Equipment (DME)
+          Digital Voice Recorders, and VHF Radios.
         </h4>
       </section>
 
       <section className="px-2 md:px-4 lg:px-10 py-10">
         <div className="lg:w-[85%] xl:w-[70%] lg:mr-auto lg:ml-auto lg:max-w-[80%]">
           <h2 className="italic text-xl lg:text-2xl font fold">
-            We&apos;ve got you covered{' '}
-            <span className="hidden md:block">{text}</span>
+            We&apos;ve got your navigation solutions
           </h2>
           <div className="w-16 h-2 bg-[#800000] mt-1 mb-6"></div>
           <div className="flex flex-col space-y-4 justify-center items-center md:flex-row md:space-y-0 md:space-x-10 lg:space-x-20 ">
             <div className="md:w-[80%] ">
               <p className="mb-6 tracking-wider leading-7">
-                ​Our business spans through network auditing, upgrade and
-                integration. ​Our specialities include but not limited to
-                outdoor/indoor wireless networks, metropolitan area networks and
-                wide area networks using bridges and routers.
+                The Land-Based Vector NDB (Non-Directional RadioBeacon System)
+                installed and maintained by Ping Telecoms is a highly
+                sophisticated solid state, high power radio beacon that provide
+                high overall efficiency (70% or better) results in low power
+                consumption and reduced operating costs. The entire suit
+                consists of a Transmitter, Beacon Monitor Receiver and NLA/2
+                Active Lop Antenna, an ATU (Antenna tunning unit) designed to
+                match the impedance of the antenna, and a 40 foot self
+                supporting NDB antenna designed for optimal performance in a
+                small footprint.
               </p>
             </div>
 
-            <div className="relative w-[350px] h-[300px] md:w-[700px] md:h-[400px]">
+            <div className="relative w-[350px] h-[250px] md:w-[800px] md:h-[400px]">
               <Image
-                src="/images/networking2.webp"
-                alt="networking image"
+                src="/images/nautel_ndb_antenna.webp"
+                alt="non Directional Radio Beacon Transmitter"
                 fill
                 quality={100}
                 className="rounded-md"
@@ -122,20 +118,23 @@ function networks({}: Props) {
       <section className="px-2 md:px-4 lg:px-10 py-10 bg-[#222222] text-white">
         <div className="lg:w-[95%] xl:w-[80%] flex flex-col lg:flex-row lg:space-x-10 items-center justify-center lg:mr-auto lg:ml-auto lg:max-w-[80%]">
           <div className="lg:hidden">
-            <h2 className="text-xl lg:text-2xl">VSAT NETWORKS</h2>
+            <h2 className="text-xl lg:text-2xl">
+              Easy Maintenance and Troubleshooting
+            </h2>
             <div className="w-16 h-2 bg-[#800000] mt-1 mb-6"></div>
-            <p className="mb-6 tracking-wider leading-7">
-              Our VSAT services include installation, and maintenance of
-              internet gateways, hubs, remote VSAT sites, Network management,
-              Peak & Pole, site commissioning and upgrade for C-Band, KU-Band
-              and KA-Band.
+            <p className="mb-4 tracking-wider leading-7">
+              The NDB transmitter is also fitted with a sophisticated GUI
+              located on the front panel of the transmitter used to perform
+              maintenance and troubleshooting. The GUI also allows for set-up,
+              control and monitoring of the NDB wihout the need for a local
+              computer or laptop.
             </p>
           </div>
 
-          <div className="relative w-[350px] h-[300px] md:w-[450px] md:h-[400px] xl:w-[550px] xl:h-[500px] mr-auto ml-auto">
+          <div className="relative w-[350px] h-[350px] md:w-[450px] md:h-[450px] xl:w-[550px] xl:h-[550px] mr-auto ml-auto">
             <Image
-              src="/images/satellite.webp"
-              alt="VSAT satellite"
+              src="/images/nautel_ndb_GUI.webp"
+              alt="Nautel NDB GUI"
               fill
               quality={100}
               className="rounded-md"
@@ -143,13 +142,94 @@ function networks({}: Props) {
           </div>
 
           <div className="hidden lg:block lg:w-[50%]">
-            <h2 className="text-xl lg:text-2xl">VSAT NETWORKS</h2>
+            <h2 className="text-xl lg:text-2xl">
+              Easy Maintenance and Troubleshooting
+            </h2>
             <div className="w-16 h-2 bg-[#800000] mt-1 mb-6"></div>
-            <p className="mb-6 tracking-wider leading-7">
-              Our VSAT services include installation, and maintenance of
-              internet gateways, hubs, remote VSAT sites, Network management,
-              Peak & Pole, site commissioning and upgrade for C-Band, KU-Band
-              and KA-Band.
+            <p className="mb-4 tracking-wider leading-7">
+              The NDB transmitter is also fitted with a sophisticated GUI
+              located on the front panel of the transmitter used to perform
+              maintenance and troubleshooting. The GUI also allows for set-up,
+              control and monitoring of the NDB wihout the need for a local
+              computer or laptop.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-2 md:px-4 lg:px-10 py-10 text-black">
+        <div className="lg:w-[95%] xl:w-[80%] flex flex-col lg:flex-row lg:space-x-10 items-center justify-center lg:mr-auto lg:ml-auto lg:max-w-[80%]">
+          <div className="lg:w-[50%]">
+            <h2 className="text-xl lg:text-2xl">AIR BAND VHF RADIOS</h2>
+            <div className="w-16 h-2 bg-[#800000] mt-1 mb-6"></div>
+            <p className="mb-4 tracking-wider leading-7">
+              We offer installation and maintenance of ground-to-air radio
+              packed witht he latest technology. The Radios we provide are
+              compact and powerful; you get the option of choosing from a full
+              range of transmitters, receivers andtransceivers in VHF and UHF
+              models, for both civil and military settings.
+            </p>
+          </div>
+
+          <div className="flex flex-col mr-auto ml-auto items-center justify-center">
+            <div className="relative w-[200px] h-[200px] md:w-[300px] md:h-[300px] xl:w-[450px] xl:h-[450px]">
+              <Image
+                src="/images/vhf_microphone.webp"
+                alt="Nautel NDB GUI"
+                fill
+                quality={100}
+                className="rounded-md"
+              />
+            </div>
+
+            <div className="relative w-[350px] h-[70px] md:w-[400px] md:h-[80px] xl:w-[500px] xl:h-[100px] ">
+              <Image
+                src="/images/parkair_transceiver.webp"
+                alt="Nautel NDB GUI"
+                fill
+                quality={100}
+                className="rounded-md"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-2 md:px-4 lg:px-10 py-10 bg-[#222222] text-white">
+        <div className="lg:w-[95%] xl:w-[80%] flex flex-col lg:flex-row lg:space-x-10 items-center justify-center lg:mr-auto lg:ml-auto lg:max-w-[80%]">
+          <div className="lg:hidden">
+            <h2 className="text-xl lg:text-2xl">DIGITAL VOICE RECORDERS</h2>
+            <div className="w-16 h-2 bg-[#800000] mt-1 mb-6"></div>
+            <p className="mb-4 tracking-wider leading-7">
+              We set up and manage audio logging and call recording systems that
+              are reasonably priced, dependable, and feature-rich. Our voice
+              recorders provide businesses and governments with an efficient
+              approach to track and record various audio communication channels,
+              such as the phone, two-way radio, broadcast radio, public address,
+              intercoms, microphones, and more.
+            </p>
+          </div>
+
+          <div className="relative w-[300px] h-[250px] md:w-[400px] md:h-[350px] mr-auto ml-auto">
+            <Image
+              src="/images/totalrecall.webp"
+              alt="Total recall voice recorder"
+              fill
+              quality={100}
+              className="rounded-md"
+            />
+          </div>
+
+          <div className="hidden lg:block lg:w-[50%]">
+            <h2 className="text-xl lg:text-2xl">DIGITAL VOICE RECORDERS</h2>
+            <div className="w-16 h-2 bg-[#800000] mt-1 mb-6"></div>
+            <p className="mb-4 tracking-wider leading-7">
+              We set up and manage audio logging and call recording systems that
+              are reasonably priced, dependable, and feature-rich. Our voice
+              recorders provide businesses and governments with an efficient
+              approach to track and record various audio communication channels,
+              such as the phone, two-way radio, broadcast radio, public address,
+              intercoms, microphones, and more.
             </p>
           </div>
         </div>
@@ -261,4 +341,4 @@ function networks({}: Props) {
   );
 }
 
-export default networks;
+export default navigation;
