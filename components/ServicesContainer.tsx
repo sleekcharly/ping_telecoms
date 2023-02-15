@@ -21,6 +21,7 @@ function ServicesContainer({}: Props) {
           altText="OSI visibility sensor"
           title="Weather Monitoring"
           text="We supply, install, and maintain Automated Weather Observing Systems."
+          linkText="awos"
         />
 
         <ServicesItem
@@ -28,6 +29,7 @@ function ServicesContainer({}: Props) {
           altText="Agrilaser Bird control equipment"
           title="Bird Control"
           text="Ping Telecoms offers airports a solution to control birds hotspots."
+          linkText="birdcontrol"
         />
 
         <ServicesItem
@@ -35,6 +37,7 @@ function ServicesContainer({}: Props) {
           altText="Networks"
           title="Networks"
           text="We implement and support Wireless networks for Internet access, and corporate online operations."
+          linkText="networks"
         />
 
         <ServicesItem
@@ -42,6 +45,7 @@ function ServicesContainer({}: Props) {
           altText="OSI Flow Sensor"
           title="Energy Flow Sensors"
           text="We install and maintain optical flow sensors for oil and gas pipe lines."
+          linkText="flowsensors"
         />
 
         <ServicesItem
@@ -49,6 +53,7 @@ function ServicesContainer({}: Props) {
           altText="NDB Sensor"
           title="Navigational Aids"
           text="We maintain Navigational aids like Non-directional radio Beacon (NDB)."
+          linkText="navigation"
         />
 
         <ServicesItem
@@ -56,6 +61,7 @@ function ServicesContainer({}: Props) {
           altText="training class"
           title="Training & Consulting"
           text="We train engineers and students in wireless networking concepts, VSAT installation principles and techniques."
+          linkText="training"
         />
 
         <ServicesItem
@@ -63,6 +69,7 @@ function ServicesContainer({}: Props) {
           altText="cctv camera"
           title="CCTV Surveillance"
           text="We run installation and maintenance of CCTV cameras for small, medium and large enterprises."
+          linkText="cctv"
         />
 
         <ServicesItem
@@ -70,6 +77,7 @@ function ServicesContainer({}: Props) {
           altText="Runway lighting system"
           title="Runway Lighting"
           text="At Ping Telecoms, we offer installation and maintenance of Runway Lights for airports and private airstrips."
+          linkText="runwaylighting"
         />
       </div>
     </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import NextLink from 'next/link';
 import Image from 'next/image';
 import { SocialIcon } from 'react-social-icons';
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 type Props = {};
 
@@ -59,42 +60,75 @@ function Footer({}: Props) {
               >
                 {'>'} Services
               </NextLink>
-              <p className="hover:pl-2 hover:text-[#800000] hover:font-bold transition-all duration-500">
+              <Link
+                to="contactForm"
+                smooth={true}
+                duration={500}
+                className="hover:pl-2 hover:text-[#800000] hover:font-bold transition-all duration-500 cursor-pointer"
+              >
                 {'>'} Contact
-              </p>
+              </Link>
             </div>
           </div>
 
           <div className="w-full flex flex-col space-y-2 text-base">
             <h1 className="uppercase tracking-wider font-bold">Services</h1>
             <div className="flex flex-col space-y-1">
-              <p className="pb-1  text-[#800000] border-b-2 border-[#800000] opacity-60 hover:opacity-80 hover:pl-2 transition-all duration-500">
+              <NextLink
+                href="/awos"
+                className="pb-1  text-[#800000] border-b-2 border-[#800000] opacity-60 hover:opacity-80 hover:pl-2 transition-all duration-500"
+              >
                 Weather Monitoring
-              </p>
-              <p className="pb-1  text-[#800000] border-b-2 border-[#800000] opacity-60 hover:opacity-80 hover:pl-2 transition-all duration-500">
+              </NextLink>
+
+              <NextLink
+                href="/birdcontrol"
+                className="pb-1  text-[#800000] border-b-2 border-[#800000] opacity-60 hover:opacity-80 hover:pl-2 transition-all duration-500"
+              >
                 Bird Control
-              </p>
-              <p className="pb-1  text-[#800000] border-b-2 border-[#800000] opacity-60 hover:opacity-80 hover:pl-2 transition-all duration-500">
+              </NextLink>
+
+              <NextLink
+                href="/networks"
+                className="pb-1  text-[#800000] border-b-2 border-[#800000] opacity-60 hover:opacity-80 hover:pl-2 transition-all duration-500"
+              >
                 Networks
-              </p>
-              <p className="pb-1  text-[#800000] border-b-2 border-[#800000] opacity-60 hover:opacity-80 hover:pl-2 transition-all duration-500">
+              </NextLink>
+
+              <NextLink
+                href="/flowsensors"
+                className="pb-1  text-[#800000] border-b-2 border-[#800000] opacity-60 hover:opacity-80 hover:pl-2 transition-all duration-500"
+              >
                 Energy Flow Sensors
-              </p>
-              <p className="pb-1  text-[#800000] border-b-2 border-[#800000] opacity-60 hover:opacity-80 hover:pl-2 transition-all duration-500">
+              </NextLink>
+
+              <NextLink
+                href="/runwaylighting"
+                className="pb-1  text-[#800000] border-b-2 border-[#800000] opacity-60 hover:opacity-80 hover:pl-2 transition-all duration-500"
+              >
                 Runway Lighting
-              </p>
-              <p className="pb-1  text-[#800000] border-b-2 border-[#800000] opacity-60 hover:opacity-80 hover:pl-2 transition-all duration-500">
+              </NextLink>
+
+              <NextLink
+                href="/navigation"
+                className="pb-1  text-[#800000] border-b-2 border-[#800000] opacity-60 hover:opacity-80 hover:pl-2 transition-all duration-500"
+              >
                 Navigatonal Aids
-              </p>
-              <p className="pb-1  text-[#800000] border-b-2 border-[#800000] opacity-60 hover:opacity-80 hover:pl-2 transition-all duration-500">
+              </NextLink>
+
+              <NextLink
+                href="/cctv"
+                className="pb-1  text-[#800000] border-b-2 border-[#800000] opacity-60 hover:opacity-80 hover:pl-2 transition-all duration-500"
+              >
                 CCTV
-              </p>
-              <p className="pb-1  text-[#800000] border-b-2 border-[#800000] opacity-60 hover:opacity-80 hover:pl-2 transition-all duration-500">
-                Disaster Recovery
-              </p>
-              <p className="pb-1  text-[#800000] border-b-2 border-[#800000] opacity-60 hover:opacity-80 hover:pl-2 transition-all duration-500">
+              </NextLink>
+
+              <NextLink
+                href="/training"
+                className="pb-1  text-[#800000] border-b-2 border-[#800000] opacity-60 hover:opacity-80 hover:pl-2 transition-all duration-500"
+              >
                 Training & Consulting
-              </p>
+              </NextLink>
             </div>
           </div>
         </div>

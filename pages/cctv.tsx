@@ -84,7 +84,7 @@ function cctv({}: Props) {
         </h1>
         <div className="w-16 h-2 bg-[#800000] mt-1 mb-6"></div>
         <h4 className="w-[90%] lg:w-[60%] text-center">
-          We offers security cameras that encompass a vast variety of features
+          We offer security cameras that encompass a vast variety of features
           that will take care of any security system need.
         </h4>
       </section>

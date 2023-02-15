@@ -5,7 +5,10 @@ type Props = {};
 
 function ContactSection({}: Props) {
   return (
-    <section className="px-4 py-16 bg-[#222222] text-white flex flex-col space-y-10 lg:space-y-0 lg:flex-row justify-center items-center lg:space-x-10">
+    <section
+      id="contactForm"
+      className="px-4 py-16 bg-[#222222] text-white flex flex-col space-y-10 lg:space-y-0 lg:flex-row justify-center items-center lg:space-x-10"
+    >
       <div className="flex flex-col space-y-4">
         <h2 className="uppercase leading-3">
           Ping Telecommunications Resources

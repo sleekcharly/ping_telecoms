@@ -2,6 +2,7 @@ import React from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import Image from 'next/image';
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 type Props = {};
 
@@ -47,13 +48,17 @@ function CarouselContainer({}: Props) {
               businesses find Comprehensive IT & Energy Solutions
             </h2>
 
-            <button
+            <Link
+              to="contactForm"
+              smooth={true}
+              duration={500}
+              role="button"
               className="bg-[#800000] px-10 py-2 rounded-full text-white text-sm md:text-lg font-black "
               aria-label="carousel contact button"
               data-testid="carousel-button"
             >
               Get in Touch
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -77,7 +82,7 @@ function CarouselContainer({}: Props) {
               className="text-xl lg:text-4xl font-black text-[#800000]"
               aria-label="carousel header"
             >
-              We’re Professional Competitive & Competent
+              We are Professional, Competitive & Competent
             </h1>
             <h2
               className="text-sm md:text-xl font-black text-white bg-[#800000] bg-opacity-60 md:bg-transparent p-2 rounded-md"
@@ -88,13 +93,17 @@ function CarouselContainer({}: Props) {
               require.
             </h2>
 
-            <button
+            <Link
+              to="contactForm"
+              smooth={true}
+              duration={500}
+              role="button"
               className="bg-[#800000] px-10 py-2 rounded-full text-white text-sm md:text-lg font-black "
               aria-label="carousel contact button"
               data-testid="carousel-button"
             >
               Get in Touch
-            </button>
+            </Link>
           </div>
         </div>
       </Carousel>

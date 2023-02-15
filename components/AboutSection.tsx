@@ -9,7 +9,7 @@ function AboutSection({}: Props) {
   // Use the useTypewriter hook to set up the phrases
   const [text, count] = useTypewriter({
     words: [
-      'personalized.',
+      'scalable.',
       'affordable.',
       'flexible.',
       'cutting edge.',
@@ -38,7 +38,7 @@ function AboutSection({}: Props) {
         <div className="w-16 h-1 bg-[#800000] mb-6"></div>
 
         <p className="text-base mb-5">
-          Ping Telecommunications Reseource Ltd ia an indigenous ICT company
+          Ping Telecommunications Resource Ltd is an indigenous ICT company
           incorporated in Nigeria to provide cost effective and customer
           dependent services without compromising standards. We are motivated to
           help industries and corporations reduce running costs, increase

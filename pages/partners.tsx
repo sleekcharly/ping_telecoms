@@ -81,6 +81,15 @@ function partners({}: Props) {
                   quality={100}
                 />
               </div>
+
+              <div className="relative w-[200px] h-[90px] hover:scale-125 transition-all duration-200">
+                <Image
+                  src="/images/gistoracle_logo.webp"
+                  alt="Gistoracle Logo"
+                  fill
+                  quality={100}
+                />
+              </div>
             </div>
           </div>
         </div>

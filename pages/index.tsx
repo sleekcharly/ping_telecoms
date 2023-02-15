@@ -15,7 +15,7 @@ export default function Home() {
       className="overflow-hidden"
       style={{ fontFamily: 'Poppins' }}
     >
-      <Layout>
+      <Layout home={true}>
         <CarouselContainer />
         <ServicesSection />
         <AboutSection />

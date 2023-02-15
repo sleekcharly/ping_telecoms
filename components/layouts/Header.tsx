@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import NextLink from 'next/link';
+import { Link, animateScroll as scroll } from 'react-scroll';
 
-type Props = {};
+type Props = { home?: boolean };
 
-function Header({}: Props) {
+function Header({ home }: Props) {
   // set state for  hidden mobile menu
   const [hidden, setHidden] = useState(true);
 
@@ -53,9 +54,20 @@ function Header({}: Props) {
             </NextLink>
           </div>
 
-          <NextLink href="/" className="header-link group">
-            <span className="span">Contact Us</span>
-          </NextLink>
+          {home ? (
+            <Link
+              smooth={true}
+              duration={500}
+              to="contactForm"
+              className="header-link group"
+            >
+              <span className="span">Contact Us</span>
+            </Link>
+          ) : (
+            <NextLink href="/#contactForm" className="header-link group">
+              <span className="span">Contact Us</span>
+            </NextLink>
+          )}
         </nav>
 
         {/* mobile menu button */}

@@ -82,6 +82,7 @@ function awos({}: Props) {
       style={{ fontFamily: 'Poppins' }}
     >
       <Header />
+
       <section className="px-4 py-16 bg-[#222222] flex flex-col items-center text-white">
         <h1 className="text-2xl font-bold text-center">
           Automated Weather Monitoring
@@ -95,8 +96,9 @@ function awos({}: Props) {
 
       <section className="px-2 md:px-4 lg:px-10 py-10">
         <div className="lg:w-[70%] lg:mr-auto lg:ml-auto lg:max-w-[80%]">
-          <h2 className="italic text-2xl font fold">
-            We&apos;ve got you covered <span>{text}</span>
+          <h2 className="italic text-2xl font fold flex">
+            We&apos;ve got you covered{' '}
+            <span className="ml-2 hidden md:block">{text}</span>
           </h2>
           <div className="w-16 h-2 bg-[#800000] mt-1 mb-6"></div>
           <div className="flex flex-col space-y-4 justify-center items-center md:items-start md:flex-row md:space-y-0 md:space-x-4 ">
@@ -139,8 +141,21 @@ function awos({}: Props) {
       </section>
 
       <section className="p-6 bg-[#222222]">
-        <div className="md:flex md:space-x-10 items-center md:justify-center">
-          <div className="hidden md:block">
+        <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-10 items-center md:justify-center">
+          <p className="text-white md:w-[40%] lg:text-lg text-center">
+            A full OSI AWOS AV™ system calculates the altimeter setting, density
+            altitude, condensation altitude, dew point - and can report the
+            prevailing and gust wind components for pre-programmed runway
+            headings. With OSI AV software and a Digital Data Receiver (DDR),
+            tower weather telemetry and any NOTAMs are communicated by broadcast
+            audio on a pilot-activated VHF frequency or an Endless Loop
+            Dedicated Frequency (ELDF) on a specified VHF frequency; or by
+            viewing the operator&apos;s terminal display in the FBO location,
+            Internet and dialup voice modem options allow remote user access
+            from anywhere on earth.
+          </p>
+
+          <div>
             <div className="relative w-[350px] h-[450px] lg:w-[500px] lg:h-[750px]">
               <Image
                 src="/images/sonam_awos_installation.webp"
@@ -153,19 +168,149 @@ function awos({}: Props) {
               Full AWOS system installed at Chevron Nigria Sonam platform
             </p>
           </div>
+        </div>
+      </section>
 
-          <p className="text-white md:w-[40%] text-center">
-            A full OSI AWOS AV™ system calculates the altimeter setting, density
-            altitude, condensation altitude, dew point - and can report the
-            prevailing and gust wind components for pre-programmed runway
-            headings. With OSI AV software and a Digital Data Receiver (DDR),
-            tower weather telemetry and any NOTAMs are communicated by broadcast
-            audio on a pilot-activated VHF frequency or an Endless Loop
-            Dedicated Frequency (ELDF) on a specified VHF frequency; or by
-            viewing the operator&apos;s terminal display in the FBO location,
-            Internet and dialup voice modem options allow remote user access
-            from anywhere on earth.
-          </p>
+      <section className="p-6">
+        <div className="flex flex-col space-y-4 items-center justify-center lg:flex-row lg:space-y-0 lg:space-x-10">
+          <div className="lg:hidden md:w-[90%]">
+            <h1 className="text-xl lg:text-2xl">Visibility Sensors</h1>
+            <div className="w-16 h-2 bg-[#800000] mt-1 mb-6"></div>
+            <p className="mb-6 tracking-wider leading-7">
+              The OWI-430 DSP-WIVIS which is a part of the AWOS Category IV
+              system installed and maintained by Ping Telecoms is the most
+              advanced weather and visibility sensor ever made. The fully
+              automated instrument provides accurate visibility, present weather
+              and precipitation measurement in a single sensor. This 3rd
+              generation intelligent sensor uses all digital signal processing
+              (DSP) for no-drift high-accuracy results.
+            </p>
+
+            <p className="mb-3 tracking-wider leading-7">
+              Some advantages of this sensor include:
+            </p>
+            <ul className="list-disc ml-4 tracking-wider leading-6 ">
+              <li>
+                Combines present weather identification, precipitation
+                measurement and visibility into a single rugged package.
+              </li>
+              <li>Outstanding performance yet low cost.</li>
+              <li>Advanced scintillation technology.</li>
+              <li>
+                Intelligent algorithms based on over 100 million hours of OSi
+                sensor field data.
+              </li>
+              <li>
+                Rugged design - field proven from tropical to sub-arctic
+                environments.
+              </li>
+              <li>
+                Long-term reliability - designed for unattended operation
+                24/7/365.
+              </li>
+            </ul>
+          </div>
+
+          <div className="relative w-[380px] h-[250px] md:w-[550px] md:h-[400px]">
+            <Image
+              src="/images/visibility_sensor.webp"
+              alt="OSI Visibility sensor"
+              fill
+              quality={100}
+            />
+          </div>
+
+          <div className="hidden lg:block lg:w-[50%]">
+            <h1 className="text-xl lg:text-2xl">Visibility Sensors</h1>
+            <div className="w-16 h-2 bg-[#800000] mt-1 mb-6"></div>
+            <p className="mb-6 tracking-wider leading-7">
+              The OWI-430 DSP-WIVIS which is a part of the AWOS Category IV
+              system installed and maintained by Ping Telecoms is the most
+              advanced weather and visibility sensor ever made. The fully
+              automated instrument provides accurate visibility, present weather
+              and precipitation measurement in a single sensor. This 3rd
+              generation intelligent sensor uses all digital signal processing
+              (DSP) for no-drift high-accuracy results.
+            </p>
+
+            <p className="mb-3 tracking-wider leading-7">
+              Some advantages of this sensor include:
+            </p>
+            <ul className="list-disc ml-4 tracking-wider leading-6 ">
+              <li>
+                Combines present weather identification, precipitation
+                measurement and visibility into a single rugged package.
+              </li>
+              <li>Outstanding performance yet low cost.</li>
+              <li>Advanced scintillation technology.</li>
+              <li>
+                Intelligent algorithms based on over 100 million hours of OSi
+                sensor field data.
+              </li>
+              <li>
+                Rugged design - field proven from tropical to sub-arctic
+                environments.
+              </li>
+              <li>
+                Long-term reliability - designed for unattended operation
+                24/7/365.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="p-6 bg-[#222222]">
+        <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-10 items-center md:justify-center">
+          <div className=" lg:w-[50%]">
+            <h1 className="text-white text-xl lg:text-2xl">
+              CLOUD BASE Sensor
+            </h1>
+            <div className="w-16 h-2 bg-[#800000] mt-1 mb-6"></div>
+            <p className="text-white lg:text-lg mb-4">
+              Ping Telecoms provides high performance cloud height sensors
+              (ceilometers) that give accurate cloud and obscuration information
+              as part of the complete AWOS Category IV.
+            </p>
+            <p className="text-white lg:text-lg mb-4 ">
+              The Ceilometer is durable with a demonstrated
+              mean-time-between-failures of over 150,000 hours and laser life of
+              10 years. The ceilometer has been tested to IEC environmental
+              standards for vibration, shock, impulse voltages, transients,
+              operating temperature, and EMI susceptibility and emissions.
+            </p>
+
+            <p className="text-white lg:text-lg mb-2">
+              The CMBE Ceilometer installed with the AWOS has the following
+              features:
+            </p>
+            <ul className="text-white list-disc ml-6">
+              <li>Detects up to five different Cloud layers</li>
+              <li>Sky coverage Algorithm</li>
+              <li>
+                Eye-safe laser for a detection range of 25,000 or 40,000 feet
+              </li>
+              <li>
+                Automatic self-adjustment means no periodic, manual adjustments
+                are needed
+              </li>
+              <li>
+                Small, lightweight and modern design with flexible power supply
+                (12 VDC or 110/240 VAC)
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div className="relative w-[350px] h-[350px] lg:w-[500px] lg:h-[500px]">
+              <Image
+                src="/images/ceilometer.webp"
+                alt="CMBE Ceilometer sensor"
+                fill
+                quality={100}
+              />
+            </div>
+          </div>
         </div>
       </section>
 

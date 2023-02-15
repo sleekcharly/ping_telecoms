@@ -128,8 +128,8 @@ function training({}: Props) {
               We are consultants for the supply of Information Technology
               Equipment. These items of equipment include but are not limited to
               computers, printers, switches and routers, wireless radios and
-              accessories, navigation equipments, deterrants, and meteorological
-              equipments.
+              accessories, navigation equipments, bird control equipments, and
+              meteorological equipments.
             </p>
           </div>
 
@@ -150,8 +150,8 @@ function training({}: Props) {
               We are consultants for the supply of Information Technology
               Equipment. These items of equipment include but are not limited to
               computers, printers, switches and routers, wireless radios and
-              accessories, navigation equipments, deterrants, and meteorological
-              equipments.
+              accessories, navigation equipments, bird control equipments, and
+              meteorological equipments.
             </p>
           </div>
         </div>

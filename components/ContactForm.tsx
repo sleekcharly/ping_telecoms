@@ -61,7 +61,10 @@ function ContactForm({}: Props) {
   };
 
   return (
-    <div className="flex flex-col  w-[300px] md:w-[400px] space-y-4 text-white">
+    <div
+      id="contactForm2"
+      className="flex flex-col  w-[300px] md:w-[400px] space-y-4 text-white"
+    >
       <h2>Don&apos;t hesitate to contact us!</h2>
       <form
         ref={form}

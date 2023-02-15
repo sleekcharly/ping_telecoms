@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 
 type Props = {};
 
@@ -13,9 +14,14 @@ function AboutHeader({}: Props) {
         incorporated in Nigeria to provide cost effective and customer dependent
         services without compromising standards.
       </p>
-      <button className="bg-[#800000] px-5 py-2 rounded-full uppercase font-bold">
+      <Link
+        to="contactForm2"
+        smooth={true}
+        duration={500}
+        className="bg-[#800000] px-5 py-2 rounded-full uppercase font-bold cursor-pointer"
+      >
         Get in touch
-      </button>
+      </Link>
       <div className="h-[100px]"></div>
     </div>
   );

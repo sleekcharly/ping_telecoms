@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import { motion } from 'framer-motion';
+import NextLink from 'next/link';
 
 type Props = {
   imgName: string;
@@ -8,6 +9,7 @@ type Props = {
   title: string;
   body: string;
   position: string;
+  linkText: string;
 };
 
 function ServiceImageContainer({
@@ -16,6 +18,7 @@ function ServiceImageContainer({
   title,
   body,
   position,
+  linkText,
 }: Props) {
   //   const mobile = window.innerWidth <= 768 ? true : false;
 
@@ -43,9 +46,13 @@ function ServiceImageContainer({
         </div>
       </div>
 
-      <button className="bg-white text-black font-bold text-lg xl:text-2xl py-1 px-2 xl:px-4 absolute bottom-2 right-0">
+      <NextLink
+        href={`/${linkText}`}
+        role="button"
+        className="bg-white text-black font-bold text-lg xl:text-2xl py-1 px-2 xl:px-4 absolute bottom-2 right-0"
+      >
         {'>'}
-      </button>
+      </NextLink>
     </motion.div>
   ) : (
     <motion.div
@@ -71,9 +78,13 @@ function ServiceImageContainer({
         </div>
       </div>
 
-      <button className="bg-white text-black font-bold text-lg xl:text-2xl py-1 px-2 xl:px-4 absolute bottom-2 right-0">
+      <NextLink
+        href={`/${linkText}`}
+        role="button"
+        className="bg-white text-black font-bold text-lg xl:text-2xl py-1 px-2 xl:px-4 absolute bottom-2 right-0"
+      >
         {'>'}
-      </button>
+      </NextLink>
     </motion.div>
   );
 }

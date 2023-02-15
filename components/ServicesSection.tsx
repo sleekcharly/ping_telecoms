@@ -26,6 +26,7 @@ function ServicesSection({}: Props) {
           title="Weather"
           body="We supply, install and maintain Altimeter Stations, Automated Weather Observing Systems with scaled or complete suite of sensors"
           position="right"
+          linkText="awos"
         />
 
         <ServiceImageContainer
@@ -34,6 +35,7 @@ function ServicesSection({}: Props) {
           title="Bird Control"
           body="The Aerolaser Groundflex installed by Ping Telecoms offers airports a solution to control birds hotspots."
           position="left"
+          linkText="birdcontrol"
         />
       </div>
 
@@ -44,6 +46,7 @@ function ServicesSection({}: Props) {
           title="Navigation"
           body="We maintain Navigational aid like Non-directional radio Beacon (NDB), Instrument Landing System (ILS), Distance Measurement Equipment (DME) and Very High Omni Directional Range (VOR)."
           position="right"
+          linkText="navigation"
         />
 
         <ServiceImageContainer
@@ -52,6 +55,7 @@ function ServicesSection({}: Props) {
           title="Energy"
           body="We install and maintain optical flow sensors for oil and gas pipe lines.."
           position="left"
+          linkText="flowsensors"
         />
       </div>
     </div>
