@@ -92,7 +92,7 @@ function training({}: Props) {
 
       <section className="px-2 md:px-4 lg:px-10 py-10">
         <div className="lg:w-[85%] xl:w-[70%] lg:mr-auto lg:ml-auto lg:max-w-[80%]">
-          <h2 className="italic text-xl lg:text-2xl font fold flex">
+          <h2 className="italic text-xl lg:text-2xl font-bold flex">
             We&apos;ve got you covered{' '}
             <span className="hidden md:block ml-2">{text}</span>
           </h2>

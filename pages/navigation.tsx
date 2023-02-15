@@ -82,7 +82,7 @@ function navigation({}: Props) {
 
       <section className="px-2 md:px-4 lg:px-10 py-10">
         <div className="lg:w-[85%] xl:w-[70%] lg:mr-auto lg:ml-auto lg:max-w-[80%]">
-          <h2 className="italic text-xl lg:text-2xl font fold">
+          <h2 className="italic text-xl lg:text-2xl font-bold">
             We&apos;ve got your navigation solutions
           </h2>
           <div className="w-16 h-2 bg-[#800000] mt-1 mb-6"></div>

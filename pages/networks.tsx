@@ -91,9 +91,9 @@ function networks({}: Props) {
 
       <section className="px-2 md:px-4 lg:px-10 py-10">
         <div className="lg:w-[85%] xl:w-[70%] lg:mr-auto lg:ml-auto lg:max-w-[80%]">
-          <h2 className="italic text-xl lg:text-2xl font fold">
+          <h2 className="italic text-xl lg:text-2xl font-bold flex">
             We&apos;ve got you covered{' '}
-            <span className="hidden md:block">{text}</span>
+            <span className="hidden md:block ml-2">{text}</span>
           </h2>
           <div className="w-16 h-2 bg-[#800000] mt-1 mb-6"></div>
           <div className="flex flex-col space-y-4 justify-center items-center md:flex-row md:space-y-0 md:space-x-10 lg:space-x-20 ">
@@ -151,6 +151,76 @@ function networks({}: Props) {
               Peak & Pole, site commissioning and upgrade for C-Band, KU-Band
               and KA-Band.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-2 md:px-4 lg:px-10 py-10  text-black">
+        <div className="lg:w-[95%] xl:w-[80%] flex flex-col lg:flex-row lg:space-x-10 items-center justify-center lg:mr-auto lg:ml-auto lg:max-w-[80%]">
+          <div className="lg:w-[50%]">
+            <h2 className="text-xl lg:text-2xl">IOT (Internet of Things)</h2>
+            <div className="w-16 h-2 bg-[#800000] mt-1 mb-6"></div>
+
+            <div className="flex space-x-2 items-center mb-2">
+              <div className="relative w-[50px] h-[50px] lg:w-[70px] lg:h-[70px]">
+                <Image
+                  src="/images/logo.png"
+                  alt="Ping Telecoms logo"
+                  fill
+                  quality={100}
+                />
+              </div>
+              <div className="w-10 lg:w-16 h-1 lg:h-2 bg-black"></div>
+              <div className="relative w-[130px] h-[50px] lg:w-[150px] lg:h-[70px]">
+                <Image
+                  src="/images/gistoracle_logo.webp"
+                  alt="Ping Telecoms logo"
+                  fill
+                  quality={100}
+                />
+              </div>
+            </div>
+
+            <p className="mb-2 tracking-wider leading-7">
+              In partnerhip with Gistoracle, we specialize in creating
+              high-quality, custom web and software solutions for businesses of
+              all sizes.
+            </p>
+
+            <p className="mb-2 tracking-wider leading-7">
+              We use the latest technologies and development practices to ensure
+              that your solution is both reliable and scalable.
+            </p>
+
+            <p className="mb-2 tracking-wider leading-7">
+              We offer a range of services including:
+            </p>
+            <ul className="mb-2 tracking-wider leading-7 list-disc ml-4">
+              <li>Custom web development</li>
+              <li>Mobile app development</li>
+              <li>E-commerce development</li>
+              <li>Software development</li>
+              <li>Content management systems (CMS)</li>
+              <li>User experience (UX) design</li>
+              <li>Search engine optimization (SEO)</li>
+            </ul>
+
+            <p className="mb-6 tracking-wider leading-7">
+              We take a collaborative approach with each of our clients, working
+              closely with you to understand your business goals and challenges.
+              Our goal is to create a solution that not only meets your current
+              needs, but can also adapt and grow as your business evolves.
+            </p>
+          </div>
+
+          <div className="relative w-[350px] h-[300px] md:w-[450px] md:h-[400px] xl:w-[550px] xl:h-[500px] mr-auto ml-auto">
+            <Image
+              src="/images/software_development.webp"
+              alt="Software Development"
+              fill
+              quality={100}
+              className="rounded-md"
+            />
           </div>
         </div>
       </section>

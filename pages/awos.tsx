@@ -96,7 +96,7 @@ function awos({}: Props) {
 
       <section className="px-2 md:px-4 lg:px-10 py-10">
         <div className="lg:w-[70%] lg:mr-auto lg:ml-auto lg:max-w-[80%]">
-          <h2 className="italic text-2xl font fold flex">
+          <h2 className="italic text-2xl font-bold flex">
             We&apos;ve got you covered{' '}
             <span className="ml-2 hidden md:block">{text}</span>
           </h2>
