@@ -10,7 +10,7 @@ import { NextSeo } from 'next-seo';
 
 type Props = { urlPath: string };
 
-function cctv({ urlPath }: Props) {
+function Cctv({ urlPath }: Props) {
   // get date year
   const date = new Date();
   const [year] = [date.getFullYear()];
@@ -290,7 +290,7 @@ function cctv({ urlPath }: Props) {
   );
 }
 
-export default cctv;
+export default Cctv;
 
 // get server side props with SSR
 export async function getServerSideProps(context: any) {

@@ -16,7 +16,7 @@ type WindowDimensions = {
   height: number | undefined;
 };
 
-function birdcontrol({ urlPath }: Props) {
+function Birdcontrol({ urlPath }: Props) {
   // get window dimensions
   const [windowDimensions, setWindowDimensions] = useState<WindowDimensions>({
     width: undefined,
@@ -116,6 +116,7 @@ function birdcontrol({ urlPath }: Props) {
       <NextSeo
         title="Ping Telecoms | Bird Control"
         canonical={`https://www.pingtelecoms.net${urlPath}`}
+        description="We supply, install, and maintain Laser Bird Deterrents as effective bird control."
         openGraph={{
           url: `https://www.pingtelecoms.net${urlPath}`,
           title: 'Ping Telecoms | BirdControl',
@@ -378,7 +379,7 @@ function birdcontrol({ urlPath }: Props) {
   );
 }
 
-export default birdcontrol;
+export default Birdcontrol;
 
 // get server side props with SSR
 export async function getServerSideProps(context: any) {

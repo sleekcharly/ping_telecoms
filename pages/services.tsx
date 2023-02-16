@@ -5,7 +5,7 @@ import { NextSeo } from 'next-seo';
 
 type Props = { urlPath: string };
 
-function services({ urlPath }: Props) {
+function Services({ urlPath }: Props) {
   return (
     <div
       data-testid="home_page"
@@ -15,7 +15,7 @@ function services({ urlPath }: Props) {
       <NextSeo
         title="Ping Telecoms | Services"
         canonical={`https://www.pingtelecoms.net${urlPath}`}
-        description="Our core business areas are in the design, development, and management of the following services."
+        description="Ping Telecommunications Resources Limited is an indigenous ICT company incorporated in Nigeria to provide cost effective and customer dependent services without compromising standards."
         openGraph={{
           url: `https://www.pingtelecoms.net${urlPath}`,
           title: 'Ping Telecoms | About Us',
@@ -36,7 +36,7 @@ function services({ urlPath }: Props) {
   );
 }
 
-export default services;
+export default Services;
 
 // get server side props with SSR
 export async function getServerSideProps(context: any) {

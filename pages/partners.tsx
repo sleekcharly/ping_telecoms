@@ -5,7 +5,7 @@ import { NextSeo } from 'next-seo';
 
 type Props = { urlPath: string };
 
-function partners({ urlPath }: Props) {
+function Partners({ urlPath }: Props) {
   return (
     <div
       data-testid="home_page"
@@ -116,7 +116,7 @@ function partners({ urlPath }: Props) {
   );
 }
 
-export default partners;
+export default Partners;
 
 // get server side props with SSR
 export async function getServerSideProps(context: any) {

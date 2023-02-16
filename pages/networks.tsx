@@ -10,7 +10,7 @@ import { NextSeo } from 'next-seo';
 
 type Props = { urlPath: string };
 
-function networks({ urlPath }: Props) {
+function Networks({ urlPath }: Props) {
   // get date year
   const date = new Date();
   const [year] = [date.getFullYear()];
@@ -81,6 +81,7 @@ function networks({ urlPath }: Props) {
       <NextSeo
         title="Ping Telecoms | Networks"
         canonical={`https://www.pingtelecoms.net${urlPath}`}
+        description="We design, implement and support Wireless networks for Internet access, Intranet, corporate online operations, and Virtual Private networks over the Internet or third party network."
         openGraph={{
           url: `https://www.pingtelecoms.net${urlPath}`,
           title: 'Ping Telecoms | Networks',
@@ -348,7 +349,7 @@ function networks({ urlPath }: Props) {
   );
 }
 
-export default networks;
+export default Networks;
 
 // get server side props with SSR
 export async function getServerSideProps(context: any) {

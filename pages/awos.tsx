@@ -10,7 +10,7 @@ import { NextSeo } from 'next-seo';
 
 type Props = { urlPath: string };
 
-function awos({ urlPath }: Props) {
+function Awos({ urlPath }: Props) {
   // get date year
   const date = new Date();
   const [year] = [date.getFullYear()];
@@ -85,6 +85,7 @@ function awos({ urlPath }: Props) {
       <NextSeo
         title="Ping Telecoms | AWOS"
         canonical={`https://www.pingtelecoms.net${urlPath}`}
+        description="We supply, install, and maintain Altimeter stations, Automated Weather Observing Systems with scaled or complete suite of sensors."
         openGraph={{
           url: `https://www.pingtelecoms.net${urlPath}`,
           title: 'Ping Telecoms | AWOS',
@@ -437,7 +438,7 @@ function awos({ urlPath }: Props) {
   );
 }
 
-export default awos;
+export default Awos;
 
 // get server side props with SSR
 export async function getServerSideProps(context: any) {

@@ -10,7 +10,7 @@ type Props = {
   urlPath: string;
 };
 
-function about({ urlPath }: Props) {
+function About({ urlPath }: Props) {
   return (
     <div
       data-testid="home_page"
@@ -20,6 +20,7 @@ function about({ urlPath }: Props) {
       <NextSeo
         title="Ping Telecoms | About Us"
         canonical={`https://www.pingtelecoms.net${urlPath}`}
+        description="Ping Telecommunications Resources Limited is an indigenous ICT company incorporated in Nigeria to provide cost effective and customer dependent services without compromising standards."
         openGraph={{
           url: `https://www.pingtelecoms.net${urlPath}`,
           title: 'Ping Telecoms | About Us',
@@ -43,7 +44,7 @@ function about({ urlPath }: Props) {
   );
 }
 
-export default about;
+export default About;
 
 // get server side props with SSR
 export async function getServerSideProps(context: any) {

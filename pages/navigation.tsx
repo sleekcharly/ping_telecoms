@@ -9,7 +9,7 @@ import { NextSeo } from 'next-seo';
 
 type Props = { urlPath: string };
 
-function navigation({ urlPath }: Props) {
+function Navigation({ urlPath }: Props) {
   // get date year
   const date = new Date();
   const [year] = [date.getFullYear()];
@@ -360,7 +360,7 @@ function navigation({ urlPath }: Props) {
   );
 }
 
-export default navigation;
+export default Navigation;
 
 // get server side props with SSR
 export async function getServerSideProps(context: any) {

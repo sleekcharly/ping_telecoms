@@ -10,7 +10,7 @@ import { NextSeo } from 'next-seo';
 
 type Props = { urlPath: string };
 
-function training({ urlPath }: Props) {
+function Training({ urlPath }: Props) {
   // get date year
   const date = new Date();
   const [year] = [date.getFullYear()];
@@ -282,4 +282,15 @@ function training({ urlPath }: Props) {
   );
 }
 
-export default training;
+export default Training;
+
+// get server side props with SSR
+export async function getServerSideProps(context: any) {
+  // get page url
+  const urlPath = context.resolvedUrl;
+  return {
+    props: {
+      urlPath: urlPath,
+    },
+  };
+}

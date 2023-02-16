@@ -10,7 +10,7 @@ import { NextSeo } from 'next-seo';
 
 type Props = { urlPath: string };
 
-function runwaylighting({ urlPath }: Props) {
+function Runwaylighting({ urlPath }: Props) {
   // get date year
   const date = new Date();
   const [year] = [date.getFullYear()];
@@ -80,6 +80,7 @@ function runwaylighting({ urlPath }: Props) {
       <NextSeo
         title="Ping Telecoms | Runway Lighting"
         canonical={`https://www.pingtelecoms.net${urlPath}`}
+        description="At Ping Telecoms, we offer installation and maintenance of PAPI (Precision approach path indicator) runway lights which offer visual guidance to approaching aircraft with a configuration of high-intensity white lights running along the centreline of the runway and extending up to 600 meters(2,000 feet) beyond the threshold."
         openGraph={{
           url: `https://www.pingtelecoms.net${urlPath}`,
           title: 'Ping Telecoms | Runway Lighting',
@@ -245,7 +246,7 @@ function runwaylighting({ urlPath }: Props) {
   );
 }
 
-export default runwaylighting;
+export default Runwaylighting;
 
 // get server side props with SSR
 export async function getServerSideProps(context: any) {

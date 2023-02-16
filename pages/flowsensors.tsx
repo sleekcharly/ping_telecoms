@@ -10,7 +10,7 @@ import { NextSeo } from 'next-seo';
 
 type Props = { urlPath: string };
 
-function flowsensors({ urlPath }: Props) {
+function Flowsensors({ urlPath }: Props) {
   // get date year
   const date = new Date();
   const [year] = [date.getFullYear()];
@@ -80,6 +80,7 @@ function flowsensors({ urlPath }: Props) {
       <NextSeo
         title="Ping Telecoms | Flow Sensors"
         canonical={`https://www.pingtelecoms.net${urlPath}`}
+        description="At PingTelecoms, we offer installation and maintenance of OSI Energy flow sensors for oil and gas pipelines."
         openGraph={{
           url: `https://www.pingtelecoms.net${urlPath}`,
           title: 'Ping Telecoms | Flow Sensors',
@@ -322,7 +323,7 @@ function flowsensors({ urlPath }: Props) {
   );
 }
 
-export default flowsensors;
+export default Flowsensors;
 
 // get server side props with SSR
 export async function getServerSideProps(context: any) {
