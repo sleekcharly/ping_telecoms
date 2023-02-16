@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import Image from 'next/image';
 import NextLink from 'next/link';
 import { Link, animateScroll as scroll } from 'react-scroll';
+import { Menu, Transition } from '@headlessui/react';
+import { FaChevronDown } from 'react-icons/fa';
+import SideNav from '../SideNav';
 
 type Props = { home?: boolean };
 
@@ -47,8 +50,177 @@ function Header({ home }: Props) {
               <span className="span">Who we are</span>
             </NextLink>
             <NextLink href="/services" className="header-link group">
-              <span className="span">What we do</span>
+              <span className="span">Services</span>
             </NextLink>
+
+            {/* Dropdown button */}
+            <Menu as="div" className="relative inline-block text-left">
+              {({ open }) => (
+                <>
+                  <div>
+                    <Menu.Button
+                      onMouseEnter={({ target }: any) =>
+                        open ? '' : target.click()
+                      }
+                      className="inline-flex w-full justify-center header-link group "
+                    >
+                      <span className="span flex items-center">
+                        What we do
+                        <FaChevronDown
+                          className="-mr-1 ml-2 h-5 w-5"
+                          aria-hidden="true"
+                        />
+                      </span>
+                    </Menu.Button>
+                  </div>
+
+                  <Transition
+                    as={Fragment}
+                    enter="transition ease-out duration-100"
+                    enterFrom="transform opacity-0 scale-95"
+                    enterTo="transform opacity-100 scale-100"
+                    leave="transition ease-in duration-75"
+                    leaveFrom="transform opacity-100 scale-100"
+                    leaveTo="transform opacity-0 scale-95"
+                  >
+                    <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                      <div className="py-1">
+                        <Menu.Item>
+                          {({ active }) => (
+                            <NextLink
+                              href="/awos"
+                              className={`${
+                                active
+                                  ? 'bg-gray-100 text-gray-900'
+                                  : 'text-gray-700'
+                              },
+                            block px-4 py-2 text-sm`}
+                            >
+                              Weather Monitoring
+                            </NextLink>
+                          )}
+                        </Menu.Item>
+                        <Menu.Item>
+                          {({ active }) => (
+                            <NextLink
+                              href="/birdcontrol"
+                              className={`${
+                                active
+                                  ? 'bg-gray-100 text-gray-900'
+                                  : 'text-gray-700'
+                              },
+                            block px-4 py-2 text-sm`}
+                            >
+                              Bird Control
+                            </NextLink>
+                          )}
+                        </Menu.Item>
+                      </div>
+                      <div className="py-1">
+                        <Menu.Item>
+                          {({ active }) => (
+                            <NextLink
+                              href="/networks"
+                              className={`${
+                                active
+                                  ? 'bg-gray-100 text-gray-900'
+                                  : 'text-gray-700'
+                              },
+                            block px-4 py-2 text-sm`}
+                            >
+                              Networks
+                            </NextLink>
+                          )}
+                        </Menu.Item>
+                        <Menu.Item>
+                          {({ active }) => (
+                            <NextLink
+                              href="/flowsensors"
+                              className={`${
+                                active
+                                  ? 'bg-gray-100 text-gray-900'
+                                  : 'text-gray-700'
+                              },
+                            block px-4 py-2 text-sm`}
+                            >
+                              Energy Flow Sensors
+                            </NextLink>
+                          )}
+                        </Menu.Item>
+                      </div>
+                      <div className="py-1">
+                        <Menu.Item>
+                          {({ active }) => (
+                            <NextLink
+                              href="/runwaylighting"
+                              className={`${
+                                active
+                                  ? 'bg-gray-100 text-gray-900'
+                                  : 'text-gray-700'
+                              },
+                            block px-4 py-2 text-sm`}
+                            >
+                              Runway Lighting
+                            </NextLink>
+                          )}
+                        </Menu.Item>
+                        <Menu.Item>
+                          {({ active }) => (
+                            <NextLink
+                              href="/navigation"
+                              className={`${
+                                active
+                                  ? 'bg-gray-100 text-gray-900'
+                                  : 'text-gray-700'
+                              },
+                            block px-4 py-2 text-sm`}
+                            >
+                              Navigational Aids
+                            </NextLink>
+                          )}
+                        </Menu.Item>
+                      </div>
+                      <div className="py-1">
+                        <Menu.Item>
+                          {({ active }) => (
+                            <NextLink
+                              href="/cctv"
+                              className={`${
+                                active
+                                  ? 'bg-gray-100 text-gray-900'
+                                  : 'text-gray-700'
+                              },
+                            block px-4 py-2 text-sm`}
+                            >
+                              CCTV
+                            </NextLink>
+                          )}
+                        </Menu.Item>
+                      </div>
+
+                      <div className="py-1">
+                        <Menu.Item>
+                          {({ active }) => (
+                            <NextLink
+                              href="/training"
+                              className={`${
+                                active
+                                  ? 'bg-gray-100 text-gray-900'
+                                  : 'text-gray-700'
+                              },
+                            block px-4 py-2 text-sm`}
+                            >
+                              Training & Consulting
+                            </NextLink>
+                          )}
+                        </Menu.Item>
+                      </div>
+                    </Menu.Items>
+                  </Transition>
+                </>
+              )}
+            </Menu>
+
             <NextLink href="/partners" className="header-link group">
               <span className="span">Partners</span>
             </NextLink>
@@ -69,85 +241,10 @@ function Header({ home }: Props) {
             </NextLink>
           )}
         </nav>
-
-        {/* mobile menu button */}
-        <div
-          className="flex items-center md:hidden mr-3"
-          aria-label="Show mobile menu"
-          role="button"
-        >
-          <button
-            className="outline-none"
-            onClick={toggleHidden}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter') {
-                toggleHidden;
-              }
-            }}
-            data-testid="mobile-menu-toggle-button"
-          >
-            <svg
-              className="w-6 h-6 text-[#800000]"
-              xlinkShow="!showMenu"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
-        </div>
       </div>
 
-      {/* mobile menu */}
-      <div
-        className={
-          hidden
-            ? 'hidden'
-            : 'w-[30%] absolute z-10 top-6 right-4 bg-white text-[#80000] font-sans transition duration-600'
-        }
-        data-testid="mobile-nav-menu"
-      >
-        <div className="relative">
-          <button
-            className="absolute top-0 right-2 text-[#800000] border border-[#800000] px-2  rounded-full"
-            onClick={toggleHidden}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter') {
-                toggleHidden;
-              }
-            }}
-            data-testid="mobile-menu-nav-close-button"
-          >
-            X
-          </button>
-          <ul className="">
-            <li>
-              <NextLink href="/" className="block text-md font- px-2 py-4">
-                Who we are
-              </NextLink>
-            </li>
-            <li>
-              <NextLink href="/" className="block text-md font- px-2 py-4">
-                What we do
-              </NextLink>
-            </li>
-            <li>
-              <NextLink href="/" className="block text-md font- px-2 py-4">
-                Partners
-              </NextLink>
-            </li>
-            <li>
-              <NextLink href="/" className="block text-md font- px-2 py-4">
-                Contact Us
-              </NextLink>
-            </li>
-          </ul>
-        </div>
-      </div>
+      {/* mobile menu button */}
+      <SideNav />
     </div>
   );
 }

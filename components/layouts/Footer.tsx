@@ -60,14 +60,12 @@ function Footer({}: Props) {
               >
                 {'>'} Services
               </NextLink>
-              <Link
-                to="contactForm"
-                smooth={true}
-                duration={500}
+              <NextLink
+                href="/#contactForm"
                 className="hover:pl-2 hover:text-[#800000] hover:font-bold transition-all duration-500 cursor-pointer"
               >
                 {'>'} Contact
-              </Link>
+              </NextLink>
             </div>
           </div>
 
