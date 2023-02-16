@@ -20,8 +20,8 @@ function NotFound({}: Props) {
             We can&apos;t seem to find the page you are looking for.{' '}
           </p>
           <p className="text-base lg:text-lg">
-            Here are a few of the services we offer, feel free to contact us for
-            a quote!
+            Here are a few services we offer, feel free to contact us for a
+            quote!
           </p>
         </div>
 
