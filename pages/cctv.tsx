@@ -6,10 +6,11 @@ import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import { animateScroll as scroll } from 'react-scroll';
 import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
+import { NextSeo } from 'next-seo';
 
-type Props = {};
+type Props = { urlPath: string };
 
-function cctv({}: Props) {
+function cctv({ urlPath }: Props) {
   // get date year
   const date = new Date();
   const [year] = [date.getFullYear()];
@@ -76,6 +77,24 @@ function cctv({}: Props) {
   };
   return (
     <div>
+      <NextSeo
+        title="Ping Telecoms | CCTV"
+        canonical={`https://www.pingtelecoms.net${urlPath}`}
+        description="We offer security cameras that encompass a vast variety of features that will take care of any security system need."
+        openGraph={{
+          url: `https://www.pingtelecoms.net${urlPath}`,
+          title: 'Ping Telecoms | CCTV',
+          description:
+            'We offer security cameras that encompass a vast variety of features that will take care of any security system need.',
+          site_name: 'Ping Telecoms',
+          type: 'website',
+        }}
+        twitter={{
+          site: '@pingtelecoms',
+          cardType: 'summary',
+        }}
+      />
+
       <Header />
 
       <section className="px-4 py-16 bg-[#222222] flex flex-col items-center text-white">
@@ -272,3 +291,14 @@ function cctv({}: Props) {
 }
 
 export default cctv;
+
+// get server side props with SSR
+export async function getServerSideProps(context: any) {
+  // get page url
+  const urlPath = context.resolvedUrl;
+  return {
+    props: {
+      urlPath: urlPath,
+    },
+  };
+}

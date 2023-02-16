@@ -1,16 +1,34 @@
 import Layout from '@/components/layouts/Layout';
 import Image from 'next/image';
 import React from 'react';
+import { NextSeo } from 'next-seo';
 
-type Props = {};
+type Props = { urlPath: string };
 
-function partners({}: Props) {
+function partners({ urlPath }: Props) {
   return (
     <div
       data-testid="home_page"
       className="overflow-hidden"
       style={{ fontFamily: 'Poppins' }}
     >
+      <NextSeo
+        title="Ping Telecoms | Partners"
+        canonical={`https://www.pingtelecoms.net${urlPath}`}
+        description="We have partnered with industry leaders in their chosen fields to maintain international standards and keep pace with global trends in the industry."
+        openGraph={{
+          url: `https://www.pingtelecoms.net${urlPath}`,
+          title: 'Ping Telecoms | Partners',
+          description:
+            'We have partnered with industry leaders in their chosen fields to maintain international standards and keep pace with global trends in the industry.',
+          site_name: 'Ping Telecoms',
+          type: 'website',
+        }}
+        twitter={{
+          site: '@pingtelecoms',
+          cardType: 'summary',
+        }}
+      />
       <Layout>
         <div className="py-4 px-2 lg:px-4 lg:py-16 bg-[#222222] flex flex-col items-center ">
           <div className="bg-white px-2 lg:px-10 py-6 text-gray-700 lg:w-[90%] xl:w-[70%] flex flex-col space-y-10 lg:flex-row  lg:space-y-0 lg:space-x-4 rounded-md">
@@ -99,3 +117,14 @@ function partners({}: Props) {
 }
 
 export default partners;
+
+// get server side props with SSR
+export async function getServerSideProps(context: any) {
+  // get page url
+  const urlPath = context.resolvedUrl;
+  return {
+    props: {
+      urlPath: urlPath,
+    },
+  };
+}

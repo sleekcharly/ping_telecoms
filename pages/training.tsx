@@ -6,10 +6,11 @@ import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import { animateScroll as scroll } from 'react-scroll';
 import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
+import { NextSeo } from 'next-seo';
 
-type Props = {};
+type Props = { urlPath: string };
 
-function training({}: Props) {
+function training({ urlPath }: Props) {
   // get date year
   const date = new Date();
   const [year] = [date.getFullYear()];
@@ -76,6 +77,24 @@ function training({}: Props) {
   };
   return (
     <div>
+      <NextSeo
+        title="Ping Telecoms | Training"
+        canonical={`https://www.pingtelecoms.net${urlPath}`}
+        description="We train engineers and students in Open Source Operating Systems and Application software, Wireless Networking concepts and technologies, and VSAT installation principles and techniques."
+        openGraph={{
+          url: `https://www.pingtelecoms.net${urlPath}`,
+          title: 'Ping Telecoms | Training',
+          description:
+            'We train engineers and students in Open Source Operating Systems and Application software, Wireless Networking concepts and technologies, and VSAT installation principles and techniques.',
+          site_name: 'Ping Telecoms',
+          type: 'website',
+        }}
+        twitter={{
+          site: '@pingtelecoms',
+          cardType: 'summary',
+        }}
+      />
+
       <Header />
 
       <section className="px-4 py-16 bg-[#222222] flex flex-col items-center text-white">

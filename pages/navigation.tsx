@@ -5,10 +5,11 @@ import Image from 'next/image';
 import { animateScroll as scroll } from 'react-scroll';
 import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
+import { NextSeo } from 'next-seo';
 
-type Props = {};
+type Props = { urlPath: string };
 
-function navigation({}: Props) {
+function navigation({ urlPath }: Props) {
   // get date year
   const date = new Date();
   const [year] = [date.getFullYear()];
@@ -68,6 +69,24 @@ function navigation({}: Props) {
   };
   return (
     <div>
+      <NextSeo
+        title="Ping Telecoms | Navigation"
+        canonical={`https://www.pingtelecoms.net${urlPath}`}
+        description="We maintain Navigational aid like Non-directional radio Beacon (NDB), Instrument Landing System (ILS), Distance Measurement Equipment (DME) Digital Voice Recorders, and VHF Radios."
+        openGraph={{
+          url: `https://www.pingtelecoms.net${urlPath}`,
+          title: 'Ping Telecoms | Navigation',
+          description:
+            'We maintain Navigational aid like Non-directional radio Beacon (NDB), Instrument Landing System (ILS), Distance Measurement Equipment (DME) Digital Voice Recorders, and VHF Radios.',
+          site_name: 'Ping Telecoms',
+          type: 'website',
+        }}
+        twitter={{
+          site: '@pingtelecoms',
+          cardType: 'summary',
+        }}
+      />
+
       <Header />
 
       <section className="px-4 py-16 bg-[#222222] flex flex-col items-center text-white">
@@ -342,3 +361,14 @@ function navigation({}: Props) {
 }
 
 export default navigation;
+
+// get server side props with SSR
+export async function getServerSideProps(context: any) {
+  // get page url
+  const urlPath = context.resolvedUrl;
+  return {
+    props: {
+      urlPath: urlPath,
+    },
+  };
+}

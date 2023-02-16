@@ -6,10 +6,11 @@ import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import { animateScroll as scroll } from 'react-scroll';
 import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
+import { NextSeo } from 'next-seo';
 
-type Props = {};
+type Props = { urlPath: string };
 
-function flowsensors({}: Props) {
+function flowsensors({ urlPath }: Props) {
   // get date year
   const date = new Date();
   const [year] = [date.getFullYear()];
@@ -76,6 +77,23 @@ function flowsensors({}: Props) {
   };
   return (
     <div>
+      <NextSeo
+        title="Ping Telecoms | Flow Sensors"
+        canonical={`https://www.pingtelecoms.net${urlPath}`}
+        openGraph={{
+          url: `https://www.pingtelecoms.net${urlPath}`,
+          title: 'Ping Telecoms | Flow Sensors',
+          description:
+            'At PingTelecoms, we offer installation and maintenance of OSI Energy flow sensors for oil and gas pipelines.',
+          site_name: 'Ping Telecoms',
+          type: 'website',
+        }}
+        twitter={{
+          site: '@pingtelecoms',
+          cardType: 'summary',
+        }}
+      />
+
       <Header />
 
       <section className="px-4 py-16 bg-[#222222] flex flex-col items-center text-white">
@@ -305,3 +323,14 @@ function flowsensors({}: Props) {
 }
 
 export default flowsensors;
+
+// get server side props with SSR
+export async function getServerSideProps(context: any) {
+  // get page url
+  const urlPath = context.resolvedUrl;
+  return {
+    props: {
+      urlPath: urlPath,
+    },
+  };
+}

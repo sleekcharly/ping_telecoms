@@ -6,10 +6,11 @@ import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import { animateScroll as scroll } from 'react-scroll';
 import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
+import { NextSeo } from 'next-seo';
 
-type Props = {};
+type Props = { urlPath: string };
 
-function runwaylighting({}: Props) {
+function runwaylighting({ urlPath }: Props) {
   // get date year
   const date = new Date();
   const [year] = [date.getFullYear()];
@@ -76,6 +77,23 @@ function runwaylighting({}: Props) {
   };
   return (
     <div>
+      <NextSeo
+        title="Ping Telecoms | Runway Lighting"
+        canonical={`https://www.pingtelecoms.net${urlPath}`}
+        openGraph={{
+          url: `https://www.pingtelecoms.net${urlPath}`,
+          title: 'Ping Telecoms | Runway Lighting',
+          description:
+            'At Ping Telecoms, we offer installation and maintenance of PAPI (Precision approach path indicator) runway lights which offer visual guidance to approaching aircraft with a configuration of high-intensity white lights running along the centreline of the runway and extending up to 600 meters(2,000 feet) beyond the threshold.',
+          site_name: 'Ping Telecoms',
+          type: 'website',
+        }}
+        twitter={{
+          site: '@pingtelecoms',
+          cardType: 'summary',
+        }}
+      />
+
       <Header />
 
       <section className="px-4 py-16 bg-[#222222] flex flex-col items-center text-white">
@@ -228,3 +246,14 @@ function runwaylighting({}: Props) {
 }
 
 export default runwaylighting;
+
+// get server side props with SSR
+export async function getServerSideProps(context: any) {
+  // get page url
+  const urlPath = context.resolvedUrl;
+  return {
+    props: {
+      urlPath: urlPath,
+    },
+  };
+}

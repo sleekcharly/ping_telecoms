@@ -6,10 +6,11 @@ import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import { animateScroll as scroll } from 'react-scroll';
 import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
+import { NextSeo } from 'next-seo';
 
-type Props = {};
+type Props = { urlPath: string };
 
-function networks({}: Props) {
+function networks({ urlPath }: Props) {
   // get date year
   const date = new Date();
   const [year] = [date.getFullYear()];
@@ -77,6 +78,22 @@ function networks({}: Props) {
 
   return (
     <div>
+      <NextSeo
+        title="Ping Telecoms | Networks"
+        canonical={`https://www.pingtelecoms.net${urlPath}`}
+        openGraph={{
+          url: `https://www.pingtelecoms.net${urlPath}`,
+          title: 'Ping Telecoms | Networks',
+          description:
+            'We design, implement and support Wireless networks for Internet access, Intranet, corporate online operations, and Virtual Private networks over the Internet or third party network.',
+          site_name: 'Ping Telecoms',
+          type: 'website',
+        }}
+        twitter={{
+          site: '@pingtelecoms',
+          cardType: 'summary',
+        }}
+      />
       <Header />
 
       <section className="px-4 py-16 bg-[#222222] flex flex-col items-center text-white">
@@ -332,3 +349,14 @@ function networks({}: Props) {
 }
 
 export default networks;
+
+// get server side props with SSR
+export async function getServerSideProps(context: any) {
+  // get page url
+  const urlPath = context.resolvedUrl;
+  return {
+    props: {
+      urlPath: urlPath,
+    },
+  };
+}

@@ -7,14 +7,16 @@ import { FaPlay } from 'react-icons/fa';
 import { animateScroll as scroll } from 'react-scroll';
 import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
+import { NextSeo } from 'next-seo';
 
-type Props = {};
+type Props = { urlPath: string };
+
 type WindowDimensions = {
   width: number | undefined;
   height: number | undefined;
 };
 
-function birdcontrol({}: Props) {
+function birdcontrol({ urlPath }: Props) {
   // get window dimensions
   const [windowDimensions, setWindowDimensions] = useState<WindowDimensions>({
     width: undefined,
@@ -111,6 +113,22 @@ function birdcontrol({}: Props) {
 
   return (
     <div>
+      <NextSeo
+        title="Ping Telecoms | Bird Control"
+        canonical={`https://www.pingtelecoms.net${urlPath}`}
+        openGraph={{
+          url: `https://www.pingtelecoms.net${urlPath}`,
+          title: 'Ping Telecoms | BirdControl',
+          description:
+            'We supply, install, and maintain Laser Bird Deterrents as effective bird control.',
+          site_name: 'Ping Telecoms',
+          type: 'website',
+        }}
+        twitter={{
+          site: '@pingtelecoms',
+          cardType: 'summary',
+        }}
+      />
       <Header />
 
       <section className="px-4 py-16 bg-[#222222] flex flex-col items-center text-white">
@@ -361,3 +379,14 @@ function birdcontrol({}: Props) {
 }
 
 export default birdcontrol;
+
+// get server side props with SSR
+export async function getServerSideProps(context: any) {
+  // get page url
+  const urlPath = context.resolvedUrl;
+  return {
+    props: {
+      urlPath: urlPath,
+    },
+  };
+}

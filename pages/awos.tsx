@@ -6,10 +6,11 @@ import Image from 'next/image';
 import emailjs from '@emailjs/browser';
 import { animateScroll as scroll } from 'react-scroll';
 import toast from 'react-hot-toast';
+import { NextSeo } from 'next-seo';
 
-type Props = {};
+type Props = { urlPath: string };
 
-function awos({}: Props) {
+function awos({ urlPath }: Props) {
   // get date year
   const date = new Date();
   const [year] = [date.getFullYear()];
@@ -81,6 +82,22 @@ function awos({}: Props) {
       className="overflow-hidden"
       style={{ fontFamily: 'Poppins' }}
     >
+      <NextSeo
+        title="Ping Telecoms | AWOS"
+        canonical={`https://www.pingtelecoms.net${urlPath}`}
+        openGraph={{
+          url: `https://www.pingtelecoms.net${urlPath}`,
+          title: 'Ping Telecoms | AWOS',
+          description:
+            'We supply, install, and maintain Altimeter stations, Automated Weather Observing Systems with scaled or complete suite of sensors.',
+          site_name: 'Ping Telecoms',
+          type: 'website',
+        }}
+        twitter={{
+          site: '@pingtelecoms',
+          cardType: 'summary',
+        }}
+      />
       <Header />
 
       <section className="px-4 py-16 bg-[#222222] flex flex-col items-center text-white">
@@ -421,3 +438,14 @@ function awos({}: Props) {
 }
 
 export default awos;
+
+// get server side props with SSR
+export async function getServerSideProps(context: any) {
+  // get page url
+  const urlPath = context.resolvedUrl;
+  return {
+    props: {
+      urlPath: urlPath,
+    },
+  };
+}
