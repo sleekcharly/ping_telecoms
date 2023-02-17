@@ -9,7 +9,7 @@ export const getServerSideProps = async ({ res }: any) => {
   // set base url
   const baseUrl = {
     development: 'http://localhost:3000',
-    production: 'https://www.gistoracle.com',
+    production: 'https://www.pingtelecoms.net',
     test: 'http://localhost:3000',
   }[process.env.NODE_ENV];
 
