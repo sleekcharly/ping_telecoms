@@ -64,7 +64,7 @@ function MissionVission({}: Props) {
             <h2 className="text-2xl">Careers</h2>
             <p className="text-center text-sm md:text-base">
               We are always committed to having the best minds in our team. At
-              PINGTEL we ensure our employees develop their careers by through
+              PINGTEL we ensure our employees develop their careers through
               exposure to priceless field projects and experiences.
             </p>
           </div>

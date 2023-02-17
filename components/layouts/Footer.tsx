@@ -38,7 +38,7 @@ function Footer({}: Props) {
         <div className="flex flex-col space-y-10 md:flex-row md:space-x-28 md:space-y-0 ">
           <div className="flex flex-col space-y-2  text-base">
             <h1 className="uppercase tracking-wider font-bold">links</h1>
-            <div className="flex md:flex-col justify-around md:w-[90px] md:space-y-10">
+            <div className="flex md:flex-col justify-around md:w-[120px] md:space-y-10">
               <NextLink
                 href="/"
                 role="button"

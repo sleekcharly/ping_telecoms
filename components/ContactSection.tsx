@@ -17,7 +17,7 @@ function ContactSection({}: Props) {
           <span className="hover:text-white">
             58, Awoniyi Elemo Street, Ajao Estate,
           </span>{' '}
-          <span className="italic">lagos, Nigeria.</span>
+          <span className="italic">Lagos, Nigeria.</span>
         </p>
         <div className="w-16 h-1 bg-[#800000] mb-6"></div>
         <p className="text-lg">Email: info@pingtelecoms.net</p>
