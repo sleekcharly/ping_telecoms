@@ -31,7 +31,7 @@ function CarouselContainer({}: Props) {
           </div>
 
           <div
-            className="absolute top-[20%] lg:top-[30%] left-[7%] md:left-[7%] lg:left-[10%] w-[80%] md:w-[40%] lg:w-[30%] flex flex-col items-center justify-center space-y-6 md:space-y-10 xl:space-y-20"
+            className="absolute top-[20%] left-[7%] md:left-[7%] lg:left-[10%] w-[80%] md:w-[40%] lg:w-[30%] flex flex-col items-center justify-center space-y-6 md:space-y-10 xl:space-y-20"
             style={{ fontFamily: 'Poppins' }}
           >
             <h1

@@ -29,7 +29,7 @@ function MissionVisionValues({}: Props) {
         mlStyling="lg:ml-[30%]"
         title="Careers"
         text="We are always committed to having the best minds in our team. At
-          PINGTEL we ensure our employees develop their careers by through
+          PINGTEL we ensure our employees develop their careers through
           exposure to priceless field projects and experiences."
       />
     </div>
