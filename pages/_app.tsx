@@ -24,25 +24,20 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       {/* Google tag (gtag.js) */}
       <Script
-        strategy="afterInteractive"
-        async
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_GA_MEASUREMENT_ID}`}
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
       />
-      <Script
-        id="google-analytics"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-          window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+      <Script strategy="lazyOnload" id="Google Analytics">
+        {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+                    page_path: window.location.pathname,
+                    });
+                `}
+      </Script>
 
-        gtag('config', '${process.env.NEXT_GA_MEASUREMENT_ID}', {
-            page_path: window.location.pathname,
-        });
-        `,
-        }}
-      />
       <DefaultSeo
         title="Ping Telecoms"
         description="Ping Telecommunications Resources Limited is an indigenous ICT company incorporated in Nigeria to provide cost effective and customer dependent services without compromising standards."
